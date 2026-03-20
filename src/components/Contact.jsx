@@ -1,4 +1,4 @@
-﻿import { Mail, Github, Linkedin } from 'lucide-react'
+﻿import { Mail, Github, Linkedin, Download } from 'lucide-react'
 import '../styles/Contact.css'
 
 const CONTACTS = [
@@ -47,6 +47,27 @@ export default function Contact() {
               <span className="contact-card-value">{value}</span>
             </a>
           ))}
+        </div>
+        <div className="resume-downloads">
+          <p className="resume-downloads-label">Download Resume</p>
+          <div className="resume-downloads-buttons">
+            <a
+              href="/resume-product.pdf"
+              download="Thejesh_Kambhalamatam_Resume_Product.pdf"
+              className="btn btn-primary"
+            >
+              <Download size={14} />
+              Product-Based
+            </a>
+            <a
+              href="/resume-service.pdf"
+              download="Thejesh_Kambhalamatam_Resume_Service.pdf"
+              className="btn btn-outline"
+            >
+              <Download size={14} />
+              Service-Based
+            </a>
+          </div>
         </div>
       </div>
     </section>

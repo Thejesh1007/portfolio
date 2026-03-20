@@ -73,7 +73,33 @@
   word-break: break-all;
 }
 
+/* Resume Downloads */
+.resume-downloads {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.resume-downloads-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+}
+
+.resume-downloads-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .contact-cards { flex-direction: column; align-items: stretch; }
-  .contact-card  { padding: 24px; }
+  .contact-card { padding: 24px; }
+  .resume-downloads-buttons { flex-direction: column; align-items: center; }
 }

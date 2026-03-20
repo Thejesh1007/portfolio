@@ -42,9 +42,8 @@ export default function Navbar() {
         </ul>
         <div className="navbar-resume">
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/resume-product.pdf"
+            download="Thejesh_Kambhalamatam_Resume.pdf"
             className="btn btn-primary"
             style={{ fontSize: '0.83rem', padding: '8px 18px' }}
           >
@@ -67,9 +66,8 @@ export default function Navbar() {
           </button>
         ))}
         <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/resume-product.pdf"
+          download="Thejesh_Kambhalamatam_Resume.pdf"
           className="btn btn-primary mobile-resume"
           onClick={closeMenu}
         >
