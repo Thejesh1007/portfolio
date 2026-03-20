@@ -1,0 +1,124 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background var(--trans-slow), border-color var(--trans-slow), backdrop-filter var(--trans-slow);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 15, 15, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--border);
+}
+
+.navbar-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+.navbar-logo span { color: var(--accent); }
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.navbar-links li a,
+.navbar-links li button {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: color var(--trans), background var(--trans);
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-links li a:hover,
+.navbar-links li button:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.navbar-resume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: 4px;
+}
+
+.navbar-mobile {
+  display: none;
+  flex-direction: column;
+  background: rgba(15, 15, 15, 0.97);
+  border-top: 1px solid var(--border);
+  padding: 12px 0 20px;
+}
+
+.navbar-mobile.open { display: flex; }
+
+.navbar-mobile a,
+.navbar-mobile button {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 12px 24px;
+  text-align: left;
+  text-decoration: none;
+  transition: color var(--trans), background var(--trans);
+  display: block;
+  width: 100%;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile button:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.navbar-mobile .mobile-resume {
+  margin: 8px 24px 0;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-links,
+  .navbar-resume { display: none; }
+  .navbar-hamburger { display: block; }
+}
